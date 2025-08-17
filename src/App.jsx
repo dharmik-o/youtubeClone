@@ -12,7 +12,6 @@ function App() {
       <Route path ="/home" element={<HomePage/>}>
           <Route index  element={<HomePageSuggestion/>}/>
        </Route>
-       
        <Route path="/results/:videoId" element={<VideoPlayerPage/>}/>
      </Routes>
     </FormProvider>
