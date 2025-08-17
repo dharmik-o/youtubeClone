@@ -2,6 +2,12 @@
 
 This is a simple video streaming platform built with React and Vite. It allows users to browse, watch, and interact with videos.
 
+## Live Demo
+
+You can view a live demo of the application [here](https://youtube-clone-seven-gamma-68.vercel.app/).
+if a page does not render don't worry, click on the url and press enter it should load the page
+
+
 ## Features
 
 *   **Video Playback:** Watch videos on a dedicated player page.
@@ -41,7 +47,6 @@ This is a simple video streaming platform built with React and Vite. It allows u
 *   **react:** A JavaScript library for building user interfaces.
 *   **react-dom:** Serves as the entry point to the DOM and server renderers for React.
 *   **react-router-dom:** DOM bindings for React Router.
-*   **bootstrap:** A popular CSS framework for building responsive, mobile-first sites.
 *   **formik:** A small library that helps you with the 3 most annoying parts: getting values in and out of form state, validation and error messages, and handling form submission.
 *   **yup:** A JavaScript schema builder for value parsing and validation.
 *   **react-icons:** A small library that helps you add icons to your React apps.
