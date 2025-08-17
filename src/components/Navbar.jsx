@@ -1,15 +1,29 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink ,useNavigate} from 'react-router-dom'
 import pfp from "../assests/default_pfp.png"
 import "../styles/Navbar.css"
-export default function Navbar() {
+import { useState } from 'react'
+export default function Navbar({ theme, toggleTheme }) {
+  const navigate = useNavigate();
   const user = JSON.parse(localStorage.getItem("userData"))
+  const [query,setQuery]  = useState("");
+  const handleSubmit = (e)=>{
+    e.preventDefault();
+    navigate(`/home/search?query=${encodeURIComponent(query)}`)
+  }
   return (
     <nav className='main-navbar'>
-      <NavLink>Video Streamer</NavLink>
-      <form className='search-form '>
-        <input type="text" />
-        <button>🔎</button>
+      <NavLink to={"/home"}>Video Streamer</NavLink>
+      <form className='search-form ' 
+      onSubmit={(e)=>handleSubmit(e)}>
+        <input type="text" 
+        value = {query}
+        onChange={(e)=>setQuery(e.target.value)}
+        placeholder='Search across our plateform'/>
+        <button type='submit'>🔎</button>
       </form>
+      <button onClick={toggleTheme}>
+        Switch to {theme === 'light' ? 'Dark' : 'Light'} Mode
+      </button>
       <NavLink to={'/user-profile'}
       style={{
        display:"flex",

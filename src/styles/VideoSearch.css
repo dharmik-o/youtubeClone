@@ -1,0 +1,53 @@
+/* Main video container (like YouTube search results) */
+.video-card-search {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  padding: 20px 30px;
+  width: 100%;
+}
+
+/* Thumbnail on the left */
+.video-thumbnail-search img {
+  width: 450px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Right side details */
+.video-details-search {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  flex: 1;
+}
+
+/* Channel profile picture */
+.channel-profile-pic-search img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Video info (title + channel name) */
+.video-info-search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.video-title-search {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 6px 0;
+  color: #0f0f0f;
+}
+
+.channel-name-search {
+  font-size: 14px;
+  color: #606060;
+}

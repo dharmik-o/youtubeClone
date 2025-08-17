@@ -28,19 +28,19 @@ const Sidebar = ({ isOpen }) => {
             </NavLink>
         </li>
         <li className="nav-item">
-            <NavLink to="/liked" className={({ isActive }) => isActive ? 'active' : ''}>
+            <NavLink to="/user-profile/liked-videos" className={({ isActive }) => isActive ? 'active' : ''}>
                 <LikedVideosIcon />
                 Liked Videos
             </NavLink>
         </li>
         <li className="nav-item">
-            <NavLink to="/disliked" className={({ isActive }) => isActive ? 'active' : ''}>
+            <NavLink to="/user-profile/disliked-videos" className={({ isActive }) => isActive ? 'active' : ''}>
                 <DislikedVideosIcon />
                 Disliked Videos
             </NavLink>
         </li>
         <li className="nav-item">
-            <NavLink to="/watchlist" className={({ isActive }) => isActive ? 'active' : ''}>
+            <NavLink to="/user-profile/watchlist" className={({ isActive }) => isActive ? 'active' : ''}>
                 <WatchlistIcon />
                 Watchlist
             </NavLink>

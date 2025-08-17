@@ -5,9 +5,9 @@ import "../styles/HomePage.css"
 export default function HomePage() {
   return (
     <div className="app-layout">
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="content-wrapper">
-        <Sidebar isOpen={""}/>
+        <Sidebar isOpen={"toggleSidebar"}/>
         <main className="main-content">
           <Outlet />
         </main>
