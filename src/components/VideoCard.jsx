@@ -2,12 +2,16 @@ import React from 'react';
 import '../styles/VideoCard.css'; 
 import dftThumbnail from "../assests/default_thumbnail.jpg"
 import dftProfilePic from "../assests/default_pfp.png"
+import { NavLink } from 'react-router-dom';
 const VideoCard = ({ video, channel }) => {
   // Use a placeholder if the thumbnail or profile picture is an empty string
   const thumbnailUrl = video.thumbnail || dftThumbnail;
   const profilePicUrl = channel.profilePic || dftProfilePic;
 
   return (
+    <NavLink to={`/results/${video.id}`} 
+    style={{ textDecoration: "none", color: "inherit" }}
+  >
     <div className='video-card'>
       {/* Video Thumbnail */}
       <div className='video-thumbnail'>
@@ -25,6 +29,7 @@ const VideoCard = ({ video, channel }) => {
         </div>
       </div>
     </div>
+    </NavLink>
   );
 };
 

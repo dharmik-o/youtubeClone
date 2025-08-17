@@ -1,12 +1,17 @@
+import { Route, Routes } from "react-router-dom"
 import HomePage from "./components/HomePage"
-import VideoCard from "./components/VideoCard"
+import HomePageSuggestion from "./components/HomePageSuggestion"
+import VideoPlayerPage from "./components/VideoPlayerPage"
 
 function App() {
 
   return (
-     <div>
-      <HomePage/>
-     </div>
+     <Routes>
+       <Route path ="/" element={<HomePage/>}>
+          <Route index  element={<HomePageSuggestion/>}/>
+       </Route>
+       <Route path="/results/:videoId" element={<VideoPlayerPage/>}/>
+     </Routes>
   )
 }
 

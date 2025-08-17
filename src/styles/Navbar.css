@@ -1,0 +1,36 @@
+.main-navbar{
+    display: flex;
+    padding : 10px 50px;
+    justify-content: space-between;
+    gap : 20px;
+    align-items: center;
+}
+img[alt="profile picture"]{
+    width : 45px;
+    padding: 3px;
+    border : 2px solid rgb(10,10,10,0.4);
+    border-radius: 9999px;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  width : 40%
+}
+
+.search-form input {
+  padding: 8px 14px;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  outline: none;
+  flex: 1;
+}
+
+.search-form button {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 0 8px 8px 0;
+  background: #f0f0f0;
+  cursor: pointer;
+}

@@ -1,11 +1,17 @@
+a{
+  text-decoration: none; 
+  color: inherit;         
+  background: none;       
+  outline: none;
+}
 .video-card {
-  width: 320px;
-  margin: 10px;
   font-family: 'Roboto', sans-serif;
   cursor: pointer;
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
 }
 
 .video-card:hover {
