@@ -1,39 +1,28 @@
-a{
-  text-decoration: none; 
-  color: inherit;         
-  background: none;       
-  outline: none;
-}
 .video-card {
-  font-family: 'Roboto', sans-serif;
-  cursor: pointer;
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.2s ease-in-out;
   display: flex;
   flex-direction: column;
-}
-
-.video-card:hover {
-  transform: scale(1.03);
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .video-thumbnail img {
   width: 100%;
   height: auto;
-  display: block;
 }
 
 .video-details {
   display: flex;
-  padding: 12px;
+  padding: 10px;
 }
 
 .channel-profile-pic img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  margin-right: 12px;
+  margin-right: 10px;
 }
 
 .video-info {
@@ -43,19 +32,12 @@ a{
 
 .video-title {
   font-size: 1rem;
-  font-weight: 500;
-  color: #0f0f0f; /* For light mode */
-  margin: 0 0 4px 0;
-  line-height: 1.4;
-  /* Truncate long titles */
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;  
-  overflow: hidden;
+  font-weight: 600;
+  margin: 0;
 }
 
 .channel-name {
-  font-size: 0.85rem;
-  color: #606060; /* For light mode */
-  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+  margin: 5px 0 0 0;
 }

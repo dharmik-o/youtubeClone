@@ -11,7 +11,7 @@ export default function Navbar({ theme, toggleTheme }) {
     navigate(`/home/search?query=${encodeURIComponent(query)}`)
   }
   return (
-    <nav className='main-navbar'>
+    <nav className={`main-navbar ${theme}`}>
       <NavLink to={"/home"}>Video Streamer</NavLink>
       <form className='search-form ' 
       onSubmit={(e)=>handleSubmit(e)}>
@@ -21,8 +21,14 @@ export default function Navbar({ theme, toggleTheme }) {
         placeholder='Search across our plateform'/>
         <button type='submit'>🔎</button>
       </form>
-      <button onClick={toggleTheme}>
-        Switch to {theme === 'light' ? 'Dark' : 'Light'} Mode
+      <button onClick={toggleTheme}
+      style={{
+        color : 'white',
+        backgroundColor: "green",
+        padding : "4px 10px",
+        borderRadius : "100px"
+      }}>
+        Change Theme
       </button>
       <NavLink to={'/user-profile'}
       style={{

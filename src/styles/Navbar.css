@@ -1,27 +1,44 @@
-.main-navbar{
-    display: flex;
-    padding : 10px 50px;
-    justify-content: space-between;
-    gap : 20px;
-    align-items: center;
-    text-decoration: none;
-}
-.main-navbar a{
-  all : unset;
-  font-size: 1.2rem;
+.main-navbar {
+  display: flex;
+  padding: 10px 50px;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-img[alt="profile picture"]{
-    width : 45px;
-    padding: 3px;
-    border : 2px solid rgb(10,10,10,0.4);
-    border-radius: 9999px;
+.main-navbar.light {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+.main-navbar.dark {
+  background-color: #343a40;
+  color: #f8f9fa;
+}
+
+.main-navbar a {
+  all: unset;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.main-navbar.dark a {
+  color: #f8f9fa;
+}
+
+img[alt="profile picture"] {
+  width: 45px;
+  padding: 3px;
+  border: 2px solid rgba(10, 10, 10, 0.4);
+  border-radius: 9999px;
 }
 
 .search-form {
   display: flex;
   align-items: center;
-  width : 40%
+  width: 40%;
 }
 
 .search-form input {
@@ -33,10 +50,34 @@ img[alt="profile picture"]{
   flex: 1;
 }
 
+.main-navbar.dark .search-form input {
+  background-color: #495057;
+  color: #f8f9fa;
+  border-color: #6c757d;
+}
+
 .search-form button {
   padding: 8px 12px;
   border: 1px solid #ccc;
   border-radius: 0 8px 8px 0;
   background: #f0f0f0;
   cursor: pointer;
+}
+
+.main-navbar.dark .search-form button {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+@media (max-width: 768px) {
+  .main-navbar {
+    padding: 10px 20px;
+    flex-wrap: wrap;
+  }
+
+  .search-form {
+    width: 100%;
+    order: 3;
+    margin-top: 10px;
+  }
 }

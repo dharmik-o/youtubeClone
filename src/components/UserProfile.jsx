@@ -1,17 +1,20 @@
 import { NavLink } from "react-router-dom";
 import { Outlet } from "react-router-dom";
+import "../styles/UserProfile.css";
+import pfp from "../assests/default_pfp.png"
 const UserProfile = () => {
+    const user = JSON.parse(localStorage.getItem("userData"))
     return (
         <div className="profile-container">
             <header className="profile-header">
                 <img 
-                    src="" 
+                    src={pfp}
                     alt="User Profile" 
                     className="profile-picture" 
                 />
                 <div className="profile-info">
-                    <h1>YourUsername</h1>
-                    <p>@yourusername • 1.2K Subscribers • 150 Videos</p>
+                    <h1>{user.username}</h1>
+                    <p>{user.email} • 1.2K Subscribers • 150 Videos</p>
                 </div>
             </header>
 
