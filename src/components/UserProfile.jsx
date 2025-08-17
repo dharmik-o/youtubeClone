@@ -2,10 +2,10 @@ import { NavLink } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 import "../styles/UserProfile.css";
 import pfp from "../assests/default_pfp.png"
-const UserProfile = () => {
+const UserProfile = ({ theme }) => {
     const user = JSON.parse(localStorage.getItem("userData"))
     return (
-        <div className="profile-container">
+        <div className={`profile-container ${theme}`}>
             <header className="profile-header">
                 <img 
                     src={pfp}
@@ -40,7 +40,7 @@ const UserProfile = () => {
             </nav>
 
             <main className="content-area">
-                {/* The Outlet component renders the matched nested route's component */}
+                {/* Renders the content for the active tab (Liked, Disliked, Watchlist) */}
                 <Outlet />
             </main>
         </div>

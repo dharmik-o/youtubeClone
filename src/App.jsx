@@ -34,7 +34,7 @@ function App() {
           <Route path="search" element={<SearchedData/>}/>
        </Route>
        
-       <Route path="/user-profile" element={<UserProfile />}>
+       <Route path="/user-profile" element={<UserProfile theme={theme} />}>
         <Route index element={<LikedVideos />} />
         <Route path="liked-videos" element={<LikedVideos />} />
         <Route path="disliked-videos" element={<DislikedVideos />} />

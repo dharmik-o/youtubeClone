@@ -4,6 +4,7 @@ import VideoCard from './VideoCard';
 import { channels } from '../mockData';
 import '../styles/UserContent.css';
 
+// Displays the list of videos that the user has liked.
 export default function LikedVideos() {
     const { user } = useContext(FormContext);
     const { likedVideos } = user;

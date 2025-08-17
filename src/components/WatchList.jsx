@@ -4,6 +4,7 @@ import VideoCard from './VideoCard';
 import { channels } from '../mockData';
 import '../styles/UserContent.css';
 
+// Displays the user's watchlist.
 export default function WatchList() {
     const { user } = useContext(FormContext);
     const { watchlist } = user;

@@ -4,6 +4,7 @@ import VideoCard from './VideoCard';
 import { channels } from '../mockData';
 import '../styles/UserContent.css';
 
+// Displays the list of videos that the user has disliked.
 export default function DislikedVideos() {
     const { user } = useContext(FormContext);
     const { dislikedVideos } = user;

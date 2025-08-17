@@ -6,6 +6,8 @@ export default function Navbar({ theme, toggleTheme }) {
   const navigate = useNavigate();
   const user = JSON.parse(localStorage.getItem("userData"))
   const [query,setQuery]  = useState("");
+  
+  // Handles the search form submission
   const handleSubmit = (e)=>{
     e.preventDefault();
     navigate(`/home/search?query=${encodeURIComponent(query)}`)
