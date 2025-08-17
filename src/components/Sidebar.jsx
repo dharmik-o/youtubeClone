@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
-import "../styles/Sidebar.css"
+import "../styles/SideBar.css"
 const Sidebar = ({ isOpen }) => {
         
     const MovieSuggestionsIcon = () => (
