@@ -1,11 +1,12 @@
-import Navbar from "./components/Navbar"
+import HomePage from "./components/HomePage"
+import VideoCard from "./components/VideoCard"
 
 function App() {
 
   return (
-    <div>
-      <Navbar/>
-    </div>
+     <div>
+      <HomePage/>
+     </div>
   )
 }
 
